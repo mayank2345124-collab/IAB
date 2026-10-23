@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us &amp; Free Quote | IAB - Web Design &amp; Development</title>
+  <meta name="description" content="Get in touch with Mayank Singh at IAB. Call +91 78278 53747 or email mayank2345124@gmail.com for a free quote on your business website.">
+  <link rel="canonical" href="https://iab-web.com/contact.html">
+
+  <meta property="og:title" content="Contact Us &amp; Free Quote | IAB">
+  <meta property="og:description" content="Talk to Mayank Singh, Founder of IAB. Websites built for every business.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: '#2563EB',
+            brandLight: '#3B82F6',
+            darkbg: '#0B0F19',
+            darkcard: '#111827',
+            darkalt: '#161F30',
+          }
+        }
+      }
+    }
+  </script>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "IAB - Web Design & Development",
+    "telephone": "+91 78278 53747",
+    "email": "mayank2345124@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Delhi",
+      "addressCountry": "India"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Mayank Singh"
+    }
+  }
+  </script>
+</head>
+<body class="bg-white dark:bg-darkbg text-gray-900 dark:text-gray-100 min-h-screen flex flex-col antialiased">
+
+  <!-- Sticky Navbar -->
+  <header class="sticky top-0 z-40 w-full border-b border-gray-200/80 dark:border-gray-800 bg-white/95 dark:bg-darkbg/95 backdrop-blur-md transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-2 group focus:outline-none">
+          <div class="flex items-baseline">
+            <span class="text-2xl font-black tracking-tight text-gray-900 dark:text-white font-heading">IAB</span>
+            <span class="w-2 h-2 ml-0.5 rounded-full bg-blue-600 inline-block"></span>
+          </div>
+          <span class="hidden md:inline-block text-xs font-medium text-gray-500 dark:text-gray-400 pl-2 border-l border-gray-200 dark:border-gray-800">
+            Websites built for every business
+          </span>
+        </a>
+
+        <!-- Desktop Nav (Contact highlighted) -->
+        <nav class="hidden md:flex items-center space-x-1" aria-label="Main Navigation">
+          <a href="index.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Home</a>
+          <a href="services.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Services</a>
+          <a href="portfolio.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Portfolio</a>
+          <a href="contact.html" class="px-4 py-2 rounded-lg text-sm font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/50" aria-current="page">Contact</a>
+        </nav>
+
+        <div class="hidden md:flex items-center gap-3">
+          <button type="button" data-theme-toggle aria-label="Toggle dark mode" class="w-10 h-10 rounded-xl border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-600 dark:text-amber-400 hover:bg-gray-100 dark:hover:bg-gray-800">
+            <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+          </button>
+          <a href="contact.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors">
+            <span>Get a Free Quote</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <div class="flex md:hidden items-center gap-2">
+          <button type="button" data-theme-toggle aria-label="Toggle dark mode" class="w-10 h-10 rounded-xl border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-600 dark:text-amber-400">
+            <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+          </button>
+          <button type="button" id="mobile-menu-toggle" aria-expanded="false" aria-label="Toggle menu" class="p-2 rounded-xl border border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-200">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu-drawer" class="hidden md:hidden border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-darkbg px-4 py-4 space-y-2">
+      <a href="index.html" class="block px-4 py-3 rounded-xl text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">Home</a>
+      <a href="services.html" class="block px-4 py-3 rounded-xl text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">Services</a>
+      <a href="portfolio.html" class="block px-4 py-3 rounded-xl text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">Portfolio</a>
+      <a href="contact.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/40">Contact</a>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <main class="flex-grow space-y-20 pb-24">
+
+    <!-- Header -->
+    <section class="pt-12 sm:pt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-900/50">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          <span>Direct Contact &middot; 24-Hour Response</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+          Let&apos;s talk about your new website.
+        </h1>
+        <p class="text-base sm:text-lg text-gray-600 dark:text-gray-300">
+          Get a free consultation and fixed-price quote directly from Mayank Singh.
+        </p>
+      </div>
+    </section>
+
+    <!-- Two-Column Layout -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Left: Form -->
+        <div class="lg:col-span-7 space-y-8">
+          <div class="rounded-3xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard p-8 sm:p-10 shadow-xs">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Project Inquiry Form</h2>
+            <p class="text-xs text-gray-500 mb-6">Fill out your project details below.</p>
+
+            <!-- Success Box -->
+            <div id="form-success-box" class="hidden p-6 rounded-2xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900 space-y-4 text-left">
+              <div class="w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center">
+                <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white">Inquiry Formatted!</h3>
+              <p class="text-xs text-gray-600 dark:text-gray-300">
+                Your email client has been prompted to send these details to mayank2345124@gmail.com. If it didn&apos;t open automatically, click below:
+              </p>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <a id="open-email-btn" href="#" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-xs font-semibold">Open in Email</a>
+                <a href="https://wa.me/917827853747?text=Hi%20IAB%2C%20I%20just%20submitted%20the%20contact%20form." target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-[#25D366] text-white rounded-lg text-xs font-semibold">Message on WhatsApp</a>
+              </div>
+            </div>
+
+            <!-- Form -->
+            <form id="iab-contact-form" novalidate class="space-y-4">
+              <div>
+                <label for="contact-name" class="block text-xs font-semibold text-gray-800 dark:text-gray-200 mb-1">Your Full Name *</label>
+                <input type="text" id="contact-name" placeholder="e.g. Rajesh Kumar" required class="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <p class="field-error hidden text-[11px] text-red-500 mt-1"></p>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="contact-email" class="block text-xs font-semibold text-gray-800 dark:text-gray-200 mb-1">Email Address *</label>
+                  <input type="email" id="contact-email" placeholder="you@company.com" required class="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <p class="field-error hidden text-[11px] text-red-500 mt-1"></p>
+                </div>
+                <div>
+                  <label for="contact-phone" class="block text-xs font-semibold text-gray-800 dark:text-gray-200 mb-1">Phone / WhatsApp *</label>
+                  <input type="tel" id="contact-phone" placeholder="+91 98765 43210" required class="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <p class="field-error hidden text-[11px] text-red-500 mt-1"></p>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="contact-business-type" class="block text-xs font-semibold text-gray-800 dark:text-gray-200 mb-1">Business Type</label>
+                  <select id="contact-business-type" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="Local Shop / Retail">Local Shop / Retail</option>
+                    <option value="Clinic / Healthcare">Clinic / Healthcare</option>
+                    <option value="Restaurant / Cafe">Restaurant / Cafe</option>
+                    <option value="Tech Startup / SaaS">Tech Startup / SaaS</option>
+                    <option value="E-commerce Store">E-commerce Store</option>
+                    <option value="Corporate / Consulting">Corporate / Consulting</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="contact-service-needed" class="block text-xs font-semibold text-gray-800 dark:text-gray-200 mb-1">Service Needed</label>
+                  <select id="contact-service-needed" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="Business Websites">Business Websites</option>
+                    <option value="E-commerce Stores">E-commerce Stores</option>
+                    <option value="Landing Pages">Landing Pages</option>
+                    <option value="UI/UX Design">UI/UX Design</option>
+                    <option value="Website Redesign">Website Redesign</option>
+                    <option value="SEO and Maintenance">SEO and Maintenance</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="contact-budget" class="block text-xs font-semibold text-gray-800 dark:text-gray-200 mb-1">Budget Range</label>
+                <select id="contact-budget" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <option value="₹15,000 - ₹25,000 (Starter)">₹15,000 - ₹25,000 (Starter)</option>
+                  <option value="₹25,000 - ₹50,000 (Business)" selected>₹25,000 - ₹50,000 (Business)</option>
+                  <option value="₹50,000+ (Custom / E-commerce)">₹50,000+ (Custom / E-commerce)</option>
+                  <option value="Flexible">Flexible</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="contact-message" class="block text-xs font-semibold text-gray-800 dark:text-gray-200 mb-1">Message *</label>
+                <textarea id="contact-message" rows="4" placeholder="Tell us briefly about your goals, features, or design references..." required class="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                <p class="field-error hidden text-[11px] text-red-500 mt-1"></p>
+              </div>
+
+              <button type="submit" class="w-full py-3.5 px-6 rounded-xl font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm text-sm">
+                Send Project Details
+              </button>
+              <p class="text-[11px] text-gray-400 text-center">Prefills email to mayank2345124@gmail.com</p>
+            </form>
+          </div>
+
+          <!-- What happens next 3-step list -->
+          <div class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-[#F5F6F8] dark:bg-darkalt p-6 space-y-4">
+            <h3 class="font-bold text-sm text-gray-900 dark:text-white">What happens next?</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+              <div>
+                <div class="w-6 h-6 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center mb-1">1</div>
+                <h4 class="font-bold text-gray-900 dark:text-white">Quick Review</h4>
+                <p class="text-gray-500 text-[11px]">We review your inquiry within 4 hours.</p>
+              </div>
+              <div>
+                <div class="w-6 h-6 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center mb-1">2</div>
+                <h4 class="font-bold text-gray-900 dark:text-white">Free Consultation</h4>
+                <p class="text-gray-500 text-[11px]">We discuss scope and provide a fixed quote.</p>
+              </div>
+              <div>
+                <div class="w-6 h-6 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center mb-1">3</div>
+                <h4 class="font-bold text-gray-900 dark:text-white">Delivery</h4>
+                <p class="text-gray-500 text-[11px]">Design &amp; development starts right away.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Contact Card for Mayank Singh & Map -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="rounded-3xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard p-8 shadow-xs space-y-6">
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 rounded-2xl bg-blue-600 text-white font-bold flex items-center justify-center text-xl">
+                MS
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-900 dark:text-white">Mayank Singh</h3>
+                <p class="text-xs text-blue-600 dark:text-blue-400 font-medium">Founder, Lead Web Engineer</p>
+              </div>
+            </div>
+
+            <div class="space-y-3 text-xs">
+              <a href="tel:+917827853747" class="flex items-center justify-between p-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/60 hover:border-blue-500">
+                <span class="flex items-center gap-2">
+                  <i data-lucide="phone" class="w-4 h-4 text-blue-600"></i>
+                  <span>+91 78278 53747</span>
+                </span>
+                <span class="font-semibold text-blue-600">Call &rarr;</span>
+              </a>
+
+              <a href="mailto:mayank2345124@gmail.com" class="flex items-center justify-between p-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/60 hover:border-blue-500">
+                <span class="flex items-center gap-2 truncate">
+                  <i data-lucide="mail" class="w-4 h-4 text-blue-600 shrink-0"></i>
+                  <span class="truncate">mayank2345124@gmail.com</span>
+                </span>
+                <span class="font-semibold text-blue-600 shrink-0">Email &rarr;</span>
+              </a>
+
+              <a href="https://wa.me/917827853747?text=Hi%20IAB%2C%20I%27d%20like%20to%20know%20more%20about%20your%20website%20services." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 p-3 rounded-xl font-semibold text-white bg-[#25D366] hover:bg-[#20ba59]">
+                <i data-lucide="message-square" class="w-4 h-4"></i>
+                <span>Chat on WhatsApp</span>
+              </a>
+            </div>
+
+            <div class="pt-4 border-t border-gray-100 dark:border-gray-800 space-y-1.5 text-xs text-gray-500">
+              <p class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-blue-600"></i> Delhi, India</p>
+              <p class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4 text-blue-600"></i> Mon - Sat, 10:00 AM - 7:00 PM</p>
+            </div>
+          </div>
+
+          <!-- Embedded Map Placeholder -->
+          <div class="rounded-3xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard p-6 overflow-hidden space-y-3">
+            <div class="flex items-center justify-between text-xs font-semibold text-gray-700 dark:text-gray-300">
+              <span class="flex items-center gap-1.5">
+                <i data-lucide="map-pin" class="w-4 h-4 text-red-500"></i>
+                <span>Delhi NCR &middot; India</span>
+              </span>
+              <span class="text-gray-400">Serving Globally</span>
+            </div>
+            <div class="rounded-2xl overflow-hidden aspect-[16/9] border border-gray-200 dark:border-gray-800">
+              <iframe
+                title="Delhi NCR Location Map"
+                src="https://maps.google.com/maps?q=Connaught%20Place%2C%20New%20Delhi%2C%20India&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                class="w-full h-full border-0 filter grayscale contrast-125 dark:invert opacity-90"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-darkbg py-12 text-sm text-gray-600 dark:text-gray-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="space-y-3">
+        <div class="flex items-baseline">
+          <span class="text-xl font-black text-gray-900 dark:text-white font-heading">IAB</span>
+          <span class="w-2 h-2 ml-0.5 rounded-full bg-blue-600 inline-block"></span>
+        </div>
+        <p class="text-xs">Websites built for every business.</p>
+        <div class="text-xs font-semibold text-gray-900 dark:text-white">Mayank Singh, Founder</div>
+      </div>
+      <div>
+        <h4 class="font-semibold text-gray-900 dark:text-white mb-3 text-xs uppercase tracking-wider">Quick Links</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+          <li><a href="services.html" class="hover:text-blue-600">Services</a></li>
+          <li><a href="portfolio.html" class="hover:text-blue-600">Portfolio</a></li>
+          <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-gray-900 dark:text-white mb-3 text-xs uppercase tracking-wider">Services</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="services.html#business-websites" class="hover:text-blue-600">Business Websites</a></li>
+          <li><a href="services.html#ecommerce-stores" class="hover:text-blue-600">E-commerce Stores</a></li>
+          <li><a href="services.html#landing-pages" class="hover:text-blue-600">Landing Pages</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-gray-900 dark:text-white mb-3 text-xs uppercase tracking-wider">Contact</h4>
+        <div class="space-y-2 text-xs">
+          <p><a href="tel:+917827853747" class="hover:text-blue-600 font-semibold text-gray-900 dark:text-white">+91 78278 53747</a></p>
+          <p><a href="mailto:mayank2345124@gmail.com" class="hover:text-blue-600">mayank2345124@gmail.com</a></p>
+          <p>Delhi, India</p>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 pt-6 border-t border-gray-200 dark:border-gray-800 text-xs text-center text-gray-400">
+      &copy; 2026 IAB. All rights reserved. Founded by Mayank Singh.
+    </div>
+  </footer>
+
+  <!-- WhatsApp Button -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <a href="https://wa.me/917827853747?text=Hi%20IAB%2C%20I%27d%20like%20to%20know%20more%20about%20your%20website%20services." target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" class="flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-xl hover:bg-[#20ba59] transition-all animate-whatsapp-pulse">
+      <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.711 1.456h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.411z"/></svg>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

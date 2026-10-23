@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio &amp; Work | IAB - Web Design &amp; Development</title>
+  <meta name="description" content="View our recent client websites built for clinics, cafes, stores, and tech startups. Filter projects and read case studies.">
+  <link rel="canonical" href="https://iab-web.com/portfolio.html">
+
+  <meta property="og:title" content="Portfolio &amp; Work | IAB">
+  <meta property="og:description" content="Explore our client projects and measured business results.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: '#2563EB',
+            brandLight: '#3B82F6',
+            darkbg: '#0B0F19',
+            darkcard: '#111827',
+            darkalt: '#161F30',
+          }
+        }
+      }
+    }
+  </script>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "IAB - Web Design & Development",
+    "telephone": "+91 78278 53747",
+    "email": "mayank2345124@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Delhi",
+      "addressCountry": "India"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Mayank Singh"
+    }
+  }
+  </script>
+</head>
+<body class="bg-white dark:bg-darkbg text-gray-900 dark:text-gray-100 min-h-screen flex flex-col antialiased">
+
+  <!-- Sticky Navbar -->
+  <header class="sticky top-0 z-40 w-full border-b border-gray-200/80 dark:border-gray-800 bg-white/95 dark:bg-darkbg/95 backdrop-blur-md transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-2 group focus:outline-none">
+          <div class="flex items-baseline">
+            <span class="text-2xl font-black tracking-tight text-gray-900 dark:text-white font-heading">IAB</span>
+            <span class="w-2 h-2 ml-0.5 rounded-full bg-blue-600 inline-block"></span>
+          </div>
+          <span class="hidden md:inline-block text-xs font-medium text-gray-500 dark:text-gray-400 pl-2 border-l border-gray-200 dark:border-gray-800">
+            Websites built for every business
+          </span>
+        </a>
+
+        <!-- Desktop Nav (Portfolio highlighted) -->
+        <nav class="hidden md:flex items-center space-x-1" aria-label="Main Navigation">
+          <a href="index.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Home</a>
+          <a href="services.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Services</a>
+          <a href="portfolio.html" class="px-4 py-2 rounded-lg text-sm font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/50" aria-current="page">Portfolio</a>
+          <a href="contact.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Contact</a>
+        </nav>
+
+        <div class="hidden md:flex items-center gap-3">
+          <button type="button" data-theme-toggle aria-label="Toggle dark mode" class="w-10 h-10 rounded-xl border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-600 dark:text-amber-400 hover:bg-gray-100 dark:hover:bg-gray-800">
+            <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+          </button>
+          <a href="contact.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors">
+            <span>Get a Free Quote</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <div class="flex md:hidden items-center gap-2">
+          <button type="button" data-theme-toggle aria-label="Toggle dark mode" class="w-10 h-10 rounded-xl border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-600 dark:text-amber-400">
+            <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+          </button>
+          <button type="button" id="mobile-menu-toggle" aria-expanded="false" aria-label="Toggle menu" class="p-2 rounded-xl border border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-200">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu-drawer" class="hidden md:hidden border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-darkbg px-4 py-4 space-y-2">
+      <a href="index.html" class="block px-4 py-3 rounded-xl text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">Home</a>
+      <a href="services.html" class="block px-4 py-3 rounded-xl text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">Services</a>
+      <a href="portfolio.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/40">Portfolio</a>
+      <a href="contact.html" class="block px-4 py-3 rounded-xl text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">Contact</a>
+      <div class="pt-2">
+        <a href="contact.html" class="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold text-white bg-blue-600">
+          <span>Get a Free Quote</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <main class="flex-grow space-y-24 sm:space-y-32 pb-24">
+
+    <!-- Page Header -->
+    <section class="pt-12 sm:pt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-900/50">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          <span>Our Portfolio &amp; Case Studies</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+          Websites that elevate brands and deliver measurable growth.
+        </h1>
+        <p class="text-base sm:text-lg text-gray-600 dark:text-gray-300">
+          Browse verified websites built across healthcare, dining, retail, tech, and corporate consulting.
+        </p>
+      </div>
+    </section>
+
+    <!-- Case Study Highlight (Challenge, Solution, Result) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl border border-gray-200 dark:border-gray-800 bg-[#F5F6F8] dark:bg-darkalt p-8 sm:p-12 overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 space-y-4">
+            <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-blue-600 text-white">
+              Featured Case Study
+            </span>
+            <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">
+              Dr. Sharma&apos;s Dental Care
+            </h2>
+            <p class="text-sm text-gray-600 dark:text-gray-300">
+              A warm, welcoming healthcare portal with instant WhatsApp booking and transparent service fees.
+            </p>
+
+            <div class="space-y-3 pt-2">
+              <div class="p-3.5 rounded-xl bg-white dark:bg-darkcard border border-gray-200 dark:border-gray-800">
+                <span class="text-xs font-bold uppercase text-red-500 block mb-0.5">Challenge</span>
+                <p class="text-xs text-gray-600 dark:text-gray-300">High phone drop-off rate and patients asking repetitive fee questions.</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-white dark:bg-darkcard border border-gray-200 dark:border-gray-800">
+                <span class="text-xs font-bold uppercase text-blue-600 block mb-0.5">Solution</span>
+                <p class="text-xs text-gray-600 dark:text-gray-300">Engineered a 1-tap WhatsApp booking flow, transparent fee card, and Google Maps directions.</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-900">
+                <span class="text-xs font-bold uppercase text-emerald-600 block mb-0.5">Result</span>
+                <p class="text-xs font-bold text-emerald-900 dark:text-emerald-200">+180% patient bookings in 30 days &middot; 45% reduction in phone inquiries.</p>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a href="contact.html?project=Dr.%20Sharma%20Clinic" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors">
+                <span>Request a Similar Website</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="rounded-2xl overflow-hidden shadow-xl border border-gray-200 dark:border-gray-800 aspect-[4/3]">
+              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Dr Sharma Dental Care" class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Buttons & 9 Project Cards -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <!-- Filter controls -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-200 dark:border-gray-800 pb-4">
+        <div>
+          <h2 class="text-xl font-bold text-gray-900 dark:text-white">All Projects</h2>
+          <p class="text-xs text-gray-500">Filter by industry type</p>
+        </div>
+
+        <div class="flex flex-wrap gap-2">
+          <button type="button" data-portfolio-filter="all" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-blue-600 text-white transition-colors">
+            All
+          </button>
+          <button type="button" data-portfolio-filter="business" class="px-3.5 py-1.5 rounded-xl text-xs font-medium bg-white dark:bg-darkcard text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-800 hover:bg-gray-50 transition-colors">
+            Business
+          </button>
+          <button type="button" data-portfolio-filter="ecommerce" class="px-3.5 py-1.5 rounded-xl text-xs font-medium bg-white dark:bg-darkcard text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-800 hover:bg-gray-50 transition-colors">
+            E-commerce
+          </button>
+          <button type="button" data-portfolio-filter="restaurant" class="px-3.5 py-1.5 rounded-xl text-xs font-medium bg-white dark:bg-darkcard text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-800 hover:bg-gray-50 transition-colors">
+            Restaurant
+          </button>
+          <button type="button" data-portfolio-filter="startup" class="px-3.5 py-1.5 rounded-xl text-xs font-medium bg-white dark:bg-darkcard text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-800 hover:bg-gray-50 transition-colors">
+            Startup
+          </button>
+        </div>
+      </div>
+
+      <!-- 9 Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Card 1 -->
+        <div data-portfolio-card data-category="business" class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard overflow-hidden card-hover-lift flex flex-col justify-between group">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-gray-100 dark:bg-gray-800">
+              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Dr Sharma Dental Care" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <div class="absolute inset-0 bg-blue-900/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <a href="contact.html?project=Dr.%20Sharma%20Clinic" class="px-4 py-2 rounded-lg bg-white text-xs font-bold text-gray-900 shadow">View Project &rarr;</a>
+              </div>
+            </div>
+            <div class="p-6 space-y-2">
+              <span class="text-[11px] font-semibold text-blue-600">Business &middot; Healthcare</span>
+              <h3 class="text-base font-bold text-gray-900 dark:text-white">Dr. Sharma&apos;s Dental Care</h3>
+              <p class="text-xs text-gray-600 dark:text-gray-400">Warm healthcare portal with WhatsApp appointment bookings.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 text-xs font-semibold text-emerald-600 dark:text-emerald-400 border-t border-gray-100 dark:border-gray-800/80 mt-4 pt-3 flex justify-between">
+            <span>Live Website</span>
+            <span class="text-blue-600">Details &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div data-portfolio-card data-category="restaurant" class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard overflow-hidden card-hover-lift flex flex-col justify-between group">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-gray-100 dark:bg-gray-800">
+              <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" alt="The Artisan Roast" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <div class="absolute inset-0 bg-blue-900/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <a href="contact.html?project=The%20Artisan%20Roast" class="px-4 py-2 rounded-lg bg-white text-xs font-bold text-gray-900 shadow">View Project &rarr;</a>
+              </div>
+            </div>
+            <div class="p-6 space-y-2">
+              <span class="text-[11px] font-semibold text-blue-600">Restaurant &middot; Cafe</span>
+              <h3 class="text-base font-bold text-gray-900 dark:text-white">The Artisan Roast Coffee</h3>
+              <p class="text-xs text-gray-600 dark:text-gray-400">Digital menu cards and direct table reservation portal.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 text-xs font-semibold text-emerald-600 dark:text-emerald-400 border-t border-gray-100 dark:border-gray-800/80 mt-4 pt-3 flex justify-between">
+            <span>Live Website</span>
+            <span class="text-blue-600">Details &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div data-portfolio-card data-category="ecommerce" class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard overflow-hidden card-hover-lift flex flex-col justify-between group">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-gray-100 dark:bg-gray-800">
+              <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="Velour Minimal Apparel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <div class="absolute inset-0 bg-blue-900/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <a href="contact.html?project=Velour%20Minimal%20Apparel" class="px-4 py-2 rounded-lg bg-white text-xs font-bold text-gray-900 shadow">View Project &rarr;</a>
+              </div>
+            </div>
+            <div class="p-6 space-y-2">
+              <span class="text-[11px] font-semibold text-blue-600">E-commerce &middot; Fashion</span>
+              <h3 class="text-base font-bold text-gray-900 dark:text-white">Velour Minimal Apparel</h3>
+              <p class="text-xs text-gray-600 dark:text-gray-400">Fast storefront with Razorpay UPI payment integration.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 text-xs font-semibold text-emerald-600 dark:text-emerald-400 border-t border-gray-100 dark:border-gray-800/80 mt-4 pt-3 flex justify-between">
+            <span>Live Website</span>
+            <span class="text-blue-600">Details &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div data-portfolio-card data-category="startup" class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard overflow-hidden card-hover-lift flex flex-col justify-between group">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-gray-100 dark:bg-gray-800">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Zenith Logistics AI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <div class="absolute inset-0 bg-blue-900/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <a href="contact.html?project=Zenith%20Logistics%20AI" class="px-4 py-2 rounded-lg bg-white text-xs font-bold text-gray-900 shadow">View Project &rarr;</a>
+              </div>
+            </div>
+            <div class="p-6 space-y-2">
+              <span class="text-[11px] font-semibold text-blue-600">Startup &middot; SaaS</span>
+              <h3 class="text-base font-bold text-gray-900 dark:text-white">Zenith Logistics AI</h3>
+              <p class="text-xs text-gray-600 dark:text-gray-400">Dark-mode product presentation with interactive SaaS pricing.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 text-xs font-semibold text-emerald-600 dark:text-emerald-400 border-t border-gray-100 dark:border-gray-800/80 mt-4 pt-3 flex justify-between">
+            <span>Live Website</span>
+            <span class="text-blue-600">Details &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div data-portfolio-card data-category="business" class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard overflow-hidden card-hover-lift flex flex-col justify-between group">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-gray-100 dark:bg-gray-800">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Verma & Associates Legal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <div class="absolute inset-0 bg-blue-900/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <a href="contact.html?project=Verma%20Legal" class="px-4 py-2 rounded-lg bg-white text-xs font-bold text-gray-900 shadow">View Project &rarr;</a>
+              </div>
+            </div>
+            <div class="p-6 space-y-2">
+              <span class="text-[11px] font-semibold text-blue-600">Business &middot; Legal</span>
+              <h3 class="text-base font-bold text-gray-900 dark:text-white">Verma &amp; Associates Legal</h3>
+              <p class="text-xs text-gray-600 dark:text-gray-400">Authoritative legal counsel portal with consultation booking.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 text-xs font-semibold text-emerald-600 dark:text-emerald-400 border-t border-gray-100 dark:border-gray-800/80 mt-4 pt-3 flex justify-between">
+            <span>Live Website</span>
+            <span class="text-blue-600">Details &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div data-portfolio-card data-category="business" class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard overflow-hidden card-hover-lift flex flex-col justify-between group">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-gray-100 dark:bg-gray-800">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Urban Nest Properties" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <div class="absolute inset-0 bg-blue-900/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <a href="contact.html?project=Urban%20Nest" class="px-4 py-2 rounded-lg bg-white text-xs font-bold text-gray-900 shadow">View Project &rarr;</a>
+              </div>
+            </div>
+            <div class="p-6 space-y-2">
+              <span class="text-[11px] font-semibold text-blue-600">Business &middot; Real Estate</span>
+              <h3 class="text-base font-bold text-gray-900 dark:text-white">Urban Nest Properties</h3>
+              <p class="text-xs text-gray-600 dark:text-gray-400">Digital property brochure with floor plans and site visit scheduling.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 text-xs font-semibold text-emerald-600 dark:text-emerald-400 border-t border-gray-100 dark:border-gray-800/80 mt-4 pt-3 flex justify-between">
+            <span>Live Website</span>
+            <span class="text-blue-600">Details &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div data-portfolio-card data-category="ecommerce" class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard overflow-hidden card-hover-lift flex flex-col justify-between group">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-gray-100 dark:bg-gray-800">
+              <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80" alt="Fresh Roots Organics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <div class="absolute inset-0 bg-blue-900/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <a href="contact.html?project=Fresh%20Roots" class="px-4 py-2 rounded-lg bg-white text-xs font-bold text-gray-900 shadow">View Project &rarr;</a>
+              </div>
+            </div>
+            <div class="p-6 space-y-2">
+              <span class="text-[11px] font-semibold text-blue-600">E-commerce &middot; Grocery</span>
+              <h3 class="text-base font-bold text-gray-900 dark:text-white">Fresh Roots Organics</h3>
+              <p class="text-xs text-gray-600 dark:text-gray-400">Weekly vegetable box subscription store with postal code validator.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 text-xs font-semibold text-emerald-600 dark:text-emerald-400 border-t border-gray-100 dark:border-gray-800/80 mt-4 pt-3 flex justify-between">
+            <span>Live Website</span>
+            <span class="text-blue-600">Details &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div data-portfolio-card data-category="startup" class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard overflow-hidden card-hover-lift flex flex-col justify-between group">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-gray-100 dark:bg-gray-800">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Trident Cloud DevOps" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <div class="absolute inset-0 bg-blue-900/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <a href="contact.html?project=Trident%20Cloud" class="px-4 py-2 rounded-lg bg-white text-xs font-bold text-gray-900 shadow">View Project &rarr;</a>
+              </div>
+            </div>
+            <div class="p-6 space-y-2">
+              <span class="text-[11px] font-semibold text-blue-600">Startup &middot; DevOps</span>
+              <h3 class="text-base font-bold text-gray-900 dark:text-white">Trident Cloud DevOps</h3>
+              <p class="text-xs text-gray-600 dark:text-gray-400">Cloud migration and Kubernetes infrastructure consulting platform.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 text-xs font-semibold text-emerald-600 dark:text-emerald-400 border-t border-gray-100 dark:border-gray-800/80 mt-4 pt-3 flex justify-between">
+            <span>Live Website</span>
+            <span class="text-blue-600">Details &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div data-portfolio-card data-category="restaurant" class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard overflow-hidden card-hover-lift flex flex-col justify-between group">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-gray-100 dark:bg-gray-800">
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Saffron Terrace Dining" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <div class="absolute inset-0 bg-blue-900/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <a href="contact.html?project=Saffron%20Terrace" class="px-4 py-2 rounded-lg bg-white text-xs font-bold text-gray-900 shadow">View Project &rarr;</a>
+              </div>
+            </div>
+            <div class="p-6 space-y-2">
+              <span class="text-[11px] font-semibold text-blue-600">Restaurant &middot; Fine Dining</span>
+              <h3 class="text-base font-bold text-gray-900 dark:text-white">Saffron Terrace Fine Dine</h3>
+              <p class="text-xs text-gray-600 dark:text-gray-400">Sensory rooftop dining portal with private celebration booking.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 text-xs font-semibold text-emerald-600 dark:text-emerald-400 border-t border-gray-100 dark:border-gray-800/80 mt-4 pt-3 flex justify-between">
+            <span>Live Website</span>
+            <span class="text-blue-600">Details &rarr;</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Final CTA Banner -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl bg-blue-600 text-white p-8 sm:p-14 text-center space-y-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold">Have a project in mind?</h2>
+        <p class="text-blue-100 max-w-xl mx-auto text-sm sm:text-base">
+          Get in touch with Mayank Singh to discuss how we can build your new website.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 pt-2">
+          <a href="contact.html" class="px-6 py-3.5 rounded-xl font-semibold text-blue-600 bg-white hover:bg-gray-100 transition-colors shadow-xs">
+            Start Your Project
+          </a>
+          <a href="https://wa.me/917827853747?text=Hi%20IAB%2C%20I%27d%20like%20to%20know%20more%20about%20your%20website%20services." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-white bg-[#25D366] hover:bg-[#20ba59] transition-colors shadow-xs">
+            <i data-lucide="message-square" class="w-4 h-4"></i>
+            <span>Chat on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-darkbg py-12 text-sm text-gray-600 dark:text-gray-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="space-y-3">
+        <div class="flex items-baseline">
+          <span class="text-xl font-black text-gray-900 dark:text-white font-heading">IAB</span>
+          <span class="w-2 h-2 ml-0.5 rounded-full bg-blue-600 inline-block"></span>
+        </div>
+        <p class="text-xs">Websites built for every business.</p>
+        <div class="text-xs font-semibold text-gray-900 dark:text-white">Mayank Singh, Founder</div>
+      </div>
+      <div>
+        <h4 class="font-semibold text-gray-900 dark:text-white mb-3 text-xs uppercase tracking-wider">Quick Links</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+          <li><a href="services.html" class="hover:text-blue-600">Services</a></li>
+          <li><a href="portfolio.html" class="hover:text-blue-600">Portfolio</a></li>
+          <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-gray-900 dark:text-white mb-3 text-xs uppercase tracking-wider">Services</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="services.html" class="hover:text-blue-600">Business Websites</a></li>
+          <li><a href="services.html" class="hover:text-blue-600">E-commerce Stores</a></li>
+          <li><a href="services.html" class="hover:text-blue-600">Landing Pages</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-gray-900 dark:text-white mb-3 text-xs uppercase tracking-wider">Contact</h4>
+        <div class="space-y-2 text-xs">
+          <p><a href="tel:+917827853747" class="hover:text-blue-600 font-semibold text-gray-900 dark:text-white">+91 78278 53747</a></p>
+          <p><a href="mailto:mayank2345124@gmail.com" class="hover:text-blue-600">mayank2345124@gmail.com</a></p>
+          <p>Delhi, India</p>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 pt-6 border-t border-gray-200 dark:border-gray-800 text-xs text-center text-gray-400">
+      &copy; 2026 IAB. All rights reserved. Founded by Mayank Singh.
+    </div>
+  </footer>
+
+  <!-- WhatsApp Button -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <a href="https://wa.me/917827853747?text=Hi%20IAB%2C%20I%27d%20like%20to%20know%20more%20about%20your%20website%20services." target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" class="flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-xl hover:bg-[#20ba59] transition-all animate-whatsapp-pulse">
+      <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.711 1.456h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.411z"/></svg>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

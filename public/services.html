@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services &amp; Pricing | IAB - Web Design &amp; Development</title>
+  <meta name="description" content="Explore our 6 web design services, industries served, pricing plans, and FAQs. Crafted by Mayank Singh, Delhi, India.">
+  <link rel="canonical" href="https://iab-web.com/services.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Services &amp; Pricing | IAB - Web Design &amp; Development">
+  <meta property="og:description" content="Business websites, E-commerce stores, Landing pages, UI/UX, redesigns, and SEO maintenance.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: '#2563EB',
+            brandLight: '#3B82F6',
+            darkbg: '#0B0F19',
+            darkcard: '#111827',
+            darkalt: '#161F30',
+          }
+        }
+      }
+    }
+  </script>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "IAB - Web Design & Development",
+    "telephone": "+91 78278 53747",
+    "email": "mayank2345124@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Delhi",
+      "addressCountry": "India"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Mayank Singh"
+    }
+  }
+  </script>
+</head>
+<body class="bg-white dark:bg-darkbg text-gray-900 dark:text-gray-100 min-h-screen flex flex-col antialiased">
+
+  <!-- Sticky Navbar -->
+  <header class="sticky top-0 z-40 w-full border-b border-gray-200/80 dark:border-gray-800 bg-white/95 dark:bg-darkbg/95 backdrop-blur-md transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-2 group focus:outline-none">
+          <div class="flex items-baseline">
+            <span class="text-2xl font-black tracking-tight text-gray-900 dark:text-white font-heading">IAB</span>
+            <span class="w-2 h-2 ml-0.5 rounded-full bg-blue-600 inline-block"></span>
+          </div>
+          <span class="hidden md:inline-block text-xs font-medium text-gray-500 dark:text-gray-400 pl-2 border-l border-gray-200 dark:border-gray-800">
+            Websites built for every business
+          </span>
+        </a>
+
+        <!-- Desktop Navigation (Services highlighted) -->
+        <nav class="hidden md:flex items-center space-x-1" aria-label="Main Navigation">
+          <a href="index.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Home</a>
+          <a href="services.html" class="px-4 py-2 rounded-lg text-sm font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/50" aria-current="page">Services</a>
+          <a href="portfolio.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Portfolio</a>
+          <a href="contact.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Contact</a>
+        </nav>
+
+        <div class="hidden md:flex items-center gap-3">
+          <button type="button" data-theme-toggle aria-label="Toggle dark mode" class="w-10 h-10 rounded-xl border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-600 dark:text-amber-400 hover:bg-gray-100 dark:hover:bg-gray-800">
+            <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+          </button>
+          <a href="contact.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors">
+            <span>Get a Free Quote</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <div class="flex md:hidden items-center gap-2">
+          <button type="button" data-theme-toggle aria-label="Toggle dark mode" class="w-10 h-10 rounded-xl border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-600 dark:text-amber-400">
+            <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+          </button>
+          <button type="button" id="mobile-menu-toggle" aria-expanded="false" aria-label="Toggle menu" class="p-2 rounded-xl border border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-200">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu-drawer" class="hidden md:hidden border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-darkbg px-4 py-4 space-y-2">
+      <a href="index.html" class="block px-4 py-3 rounded-xl text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">Home</a>
+      <a href="services.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/40">Services</a>
+      <a href="portfolio.html" class="block px-4 py-3 rounded-xl text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">Portfolio</a>
+      <a href="contact.html" class="block px-4 py-3 rounded-xl text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">Contact</a>
+      <div class="pt-2">
+        <a href="contact.html" class="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold text-white bg-blue-600">
+          <span>Get a Free Quote</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <main class="flex-grow space-y-24 sm:space-y-32 pb-24">
+
+    <!-- Page Header -->
+    <section class="pt-12 sm:pt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-900/50">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          <span>Comprehensive Web Solutions</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+          Services designed to help you stand out and sell.
+        </h1>
+        <p class="text-base sm:text-lg text-gray-600 dark:text-gray-300">
+          Clean code, thoughtful design, and clear pricing for every type of business.
+        </p>
+      </div>
+    </section>
+
+    <!-- 6 Detailed Service Blocks -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Service 1: Business Websites -->
+        <div id="business-websites" class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard p-8 flex flex-col justify-between card-hover-lift">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 flex items-center justify-center mb-6">
+              <i data-lucide="briefcase" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Business Websites</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
+              Credible, modern online presence for service firms, doctors, clinics, and consultants.
+            </p>
+            <ul class="space-y-2 text-xs text-gray-700 dark:text-gray-300 mb-6">
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>Multi-page responsive architecture</li>
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>Lead capture forms &amp; WhatsApp CTA</li>
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>Google Maps &amp; LocalBusiness schema</li>
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>SSL security &amp; fast cloud hosting setup</li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between text-xs">
+            <span class="text-gray-400">7 - 10 Days</span>
+            <a href="contact.html?service=Business%20Websites" class="font-semibold text-blue-600 hover:underline">Get quote &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Service 2: E-commerce Stores -->
+        <div id="ecommerce-stores" class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard p-8 flex flex-col justify-between card-hover-lift">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 flex items-center justify-center mb-6">
+              <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">E-commerce Stores</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
+              High-converting online stores built for seamless checkout, catalog management, and sales.
+            </p>
+            <ul class="space-y-2 text-xs text-gray-700 dark:text-gray-300 mb-6">
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>Product catalog with filtering &amp; search</li>
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>Integrated UPI &amp; card payment gateways</li>
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>Order alerts &amp; inventory tracking</li>
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>Discount coupon &amp; voucher engine</li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between text-xs">
+            <span class="text-gray-400">14 - 21 Days</span>
+            <a href="contact.html?service=E-commerce%20Stores" class="font-semibold text-blue-600 hover:underline">Get quote &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Service 3: Landing Pages -->
+        <div id="landing-pages" class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard p-8 flex flex-col justify-between card-hover-lift">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 flex items-center justify-center mb-6">
+              <i data-lucide="target" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Landing Pages</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
+              Laser-focused sales &amp; campaign pages engineered for paid ads and high conversion rates.
+            </p>
+            <ul class="space-y-2 text-xs text-gray-700 dark:text-gray-300 mb-6">
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>High-converting single-page sales funnel</li>
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>Sub-second page loading speed</li>
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>Direct WhatsApp &amp; CRM lead routing</li>
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>Sticky mobile action buttons</li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between text-xs">
+            <span class="text-gray-400">3 - 5 Days</span>
+            <a href="contact.html?service=Landing%20Pages" class="font-semibold text-blue-600 hover:underline">Get quote &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Service 4: UI/UX Design -->
+        <div id="ui-ux-design" class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard p-8 flex flex-col justify-between card-hover-lift">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 flex items-center justify-center mb-6">
+              <i data-lucide="layout" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">UI/UX Design</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
+              Thoughtful visual systems, wireframes, and design prototypes tailored to your customers.
+            </p>
+            <ul class="space-y-2 text-xs text-gray-700 dark:text-gray-300 mb-6">
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>User journey mapping &amp; architecture</li>
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>Interactive Figma prototypes</li>
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>Design systems &amp; typography rules</li>
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>WCAG contrast compliance</li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between text-xs">
+            <span class="text-gray-400">7 - 12 Days</span>
+            <a href="contact.html?service=UI%2FUX%20Design" class="font-semibold text-blue-600 hover:underline">Get quote &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Service 5: Website Redesign -->
+        <div id="website-redesign" class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard p-8 flex flex-col justify-between card-hover-lift">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 flex items-center justify-center mb-6">
+              <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Website Redesign</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
+              Modernize dated websites to improve mobile speed, SEO rankings, and fresh visual appeal.
+            </p>
+            <ul class="space-y-2 text-xs text-gray-700 dark:text-gray-300 mb-6">
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>Full audit of your current website</li>
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>301 redirect map protecting rankings</li>
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>Modern minimal visual overhaul</li>
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>90+ Google PageSpeed mobile score target</li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between text-xs">
+            <span class="text-gray-400">7 - 14 Days</span>
+            <a href="contact.html?service=Website%20Redesign" class="font-semibold text-blue-600 hover:underline">Get quote &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Service 6: SEO and Maintenance -->
+        <div id="seo-and-maintenance" class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard p-8 flex flex-col justify-between card-hover-lift">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 flex items-center justify-center mb-6">
+              <i data-lucide="trending-up" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">SEO &amp; Maintenance</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
+              Keep your website secure, blazing fast, updated, and ranking high on Google search.
+            </p>
+            <ul class="space-y-2 text-xs text-gray-700 dark:text-gray-300 mb-6">
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>On-page SEO &amp; Local schema tags</li>
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>Monthly security &amp; uptime monitoring</li>
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>Content and photo updates on request</li>
+              <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mr-2"></i>Automated weekly backups</li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between text-xs">
+            <span class="text-gray-400">Continuous Support</span>
+            <a href="contact.html?service=SEO%20and%20Maintenance" class="font-semibold text-blue-600 hover:underline">Get quote &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Industries We Serve Grid (8 sectors) -->
+    <section class="bg-[#F5F6F8] dark:bg-darkalt py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div class="text-center max-w-2xl mx-auto space-y-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Industries</span>
+          <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">Industries We Serve</h2>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Tailored structures for every business domain.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-6 rounded-2xl bg-white dark:bg-darkcard border border-gray-200 dark:border-gray-800">
+            <i data-lucide="utensils" class="w-6 h-6 text-blue-600 mb-3"></i>
+            <h3 class="font-bold text-gray-900 dark:text-white text-base mb-1">Restaurants</h3>
+            <p class="text-xs text-gray-600 dark:text-gray-400">Digital menu cards, table reservations, and food photography.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white dark:bg-darkcard border border-gray-200 dark:border-gray-800">
+            <i data-lucide="store" class="w-6 h-6 text-blue-600 mb-3"></i>
+            <h3 class="font-bold text-gray-900 dark:text-white text-base mb-1">Retail</h3>
+            <p class="text-xs text-gray-600 dark:text-gray-400">Clean storefronts, local store locator, and WhatsApp ordering.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white dark:bg-darkcard border border-gray-200 dark:border-gray-800">
+            <i data-lucide="heart-pulse" class="w-6 h-6 text-blue-600 mb-3"></i>
+            <h3 class="font-bold text-gray-900 dark:text-white text-base mb-1">Healthcare</h3>
+            <p class="text-xs text-gray-600 dark:text-gray-400">Doctor profiles, appointment booking, and treatments list.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white dark:bg-darkcard border border-gray-200 dark:border-gray-800">
+            <i data-lucide="graduation-cap" class="w-6 h-6 text-blue-600 mb-3"></i>
+            <h3 class="font-bold text-gray-900 dark:text-white text-base mb-1">Education</h3>
+            <p class="text-xs text-gray-600 dark:text-gray-400">Course catalogs, admission inquiries, and syllabus downloads.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white dark:bg-darkcard border border-gray-200 dark:border-gray-800">
+            <i data-lucide="building-2" class="w-6 h-6 text-blue-600 mb-3"></i>
+            <h3 class="font-bold text-gray-900 dark:text-white text-base mb-1">Real Estate</h3>
+            <p class="text-xs text-gray-600 dark:text-gray-400">Property floor plans, site visit scheduler, and brochure downloads.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white dark:bg-darkcard border border-gray-200 dark:border-gray-800">
+            <i data-lucide="rocket" class="w-6 h-6 text-blue-600 mb-3"></i>
+            <h3 class="font-bold text-gray-900 dark:text-white text-base mb-1">Startups</h3>
+            <p class="text-xs text-gray-600 dark:text-gray-400">Product walkthroughs, pricing tables, and waitlist funnels.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white dark:bg-darkcard border border-gray-200 dark:border-gray-800">
+            <i data-lucide="users" class="w-6 h-6 text-blue-600 mb-3"></i>
+            <h3 class="font-bold text-gray-900 dark:text-white text-base mb-1">Consultants</h3>
+            <p class="text-xs text-gray-600 dark:text-gray-400">Authority case studies, Calendly booking, and testimonials.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white dark:bg-darkcard border border-gray-200 dark:border-gray-800">
+            <i data-lucide="hand-heart" class="w-6 h-6 text-blue-600 mb-3"></i>
+            <h3 class="font-bold text-gray-900 dark:text-white text-base mb-1">Nonprofits</h3>
+            <p class="text-xs text-gray-600 dark:text-gray-400">Impact narratives, donation links, and volunteer registrations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section (3 Plans) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Pricing</span>
+        <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">Transparent Pricing Plans</h2>
+        <p class="text-sm text-gray-600 dark:text-gray-400">Fair fixed quotes. No surprise monthly lock-in fees.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Plan 1 -->
+        <div class="rounded-3xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard p-8 flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Starter</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mb-4">For local shops and professionals.</p>
+            <div class="text-3xl font-extrabold text-gray-900 dark:text-white mb-6">₹14,999 <span class="text-xs font-normal text-gray-400">/one-time</span></div>
+            <ul class="space-y-2.5 text-xs text-gray-700 dark:text-gray-300 mb-8">
+              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-500 mr-2"></i>Up to 3 custom responsive pages</li>
+              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-500 mr-2"></i>Mobile-first clean design</li>
+              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-500 mr-2"></i>Contact form + WhatsApp direct chat</li>
+              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-500 mr-2"></i>Google Maps &amp; basic on-page SEO</li>
+              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-500 mr-2"></i>Delivered in 5 - 7 business days</li>
+            </ul>
+          </div>
+          <a href="contact.html?plan=Starter" class="w-full text-center py-3 rounded-xl text-sm font-semibold text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-800 hover:bg-blue-600 hover:text-white transition-colors">
+            Choose Starter
+          </a>
+        </div>
+
+        <!-- Plan 2 (Most Popular) -->
+        <div class="relative rounded-3xl border-2 border-blue-600 dark:border-blue-500 bg-white dark:bg-darkcard p-8 flex flex-col justify-between shadow-xl lg:-translate-y-2">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold bg-blue-600 text-white">
+            ★ Most Popular
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Business</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mb-4">For established clinics, cafes, &amp; startups.</p>
+            <div class="text-3xl font-extrabold text-blue-600 mb-6">₹27,999 <span class="text-xs font-normal text-gray-400">/one-time</span></div>
+            <ul class="space-y-2.5 text-xs text-gray-700 dark:text-gray-300 mb-8">
+              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-500 mr-2"></i>Up to 7 custom responsive pages</li>
+              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-500 mr-2"></i>Interactive UI &amp; custom animations</li>
+              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-500 mr-2"></i>LocalBusiness Schema &amp; full SEO setup</li>
+              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-500 mr-2"></i>Fast Google PageSpeed optimization (90+)</li>
+              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-500 mr-2"></i>Delivered in 8 - 12 business days</li>
+              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-500 mr-2"></i>3 months complimentary technical support</li>
+            </ul>
+          </div>
+          <a href="contact.html?plan=Business" class="w-full text-center py-3.5 rounded-xl text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm">
+            Choose Business
+          </a>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="rounded-3xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard p-8 flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Custom &amp; E-Commerce</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mb-4">For online stores and custom web platforms.</p>
+            <div class="text-3xl font-extrabold text-gray-900 dark:text-white mb-6">₹44,999 <span class="text-xs font-normal text-gray-400">/starting</span></div>
+            <ul class="space-y-2.5 text-xs text-gray-700 dark:text-gray-300 mb-8">
+              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-500 mr-2"></i>Unlimited pages &amp; custom product catalog</li>
+              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-500 mr-2"></i>Payment gateways (UPI, Cards, NetBanking)</li>
+              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-500 mr-2"></i>Advanced search &amp; filtering</li>
+              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-500 mr-2"></i>Speed &amp; security hardening guarantee</li>
+              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-500 mr-2"></i>6 months priority maintenance</li>
+            </ul>
+          </div>
+          <a href="contact.html?plan=Custom" class="w-full text-center py-3 rounded-xl text-sm font-semibold text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-800 hover:bg-blue-600 hover:text-white transition-colors">
+            Choose Custom
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion (5 questions) -->
+    <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <div class="text-center space-y-2">
+        <span class="text-xs font-bold uppercase tracking-wider text-blue-600">FAQ</span>
+        <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="space-y-4">
+        <!-- Q1 -->
+        <div class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard overflow-hidden">
+          <button type="button" data-faq-button aria-expanded="true" class="w-full px-6 py-5 flex items-center justify-between text-left font-semibold text-gray-900 dark:text-white">
+            <span>How long does it take to build and launch my website?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-blue-600 transition-transform rotate-180"></i>
+          </button>
+          <div class="px-6 pb-6 pt-1 text-sm text-gray-600 dark:text-gray-300 border-t border-gray-100 dark:border-gray-800">
+            Most business websites take between 5 to 10 working days from kickoff to launch. More comprehensive e-commerce stores typically take 14 to 21 days depending on your catalog size.
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard overflow-hidden">
+          <button type="button" data-faq-button aria-expanded="false" class="w-full px-6 py-5 flex items-center justify-between text-left font-semibold text-gray-900 dark:text-white">
+            <span>Will my website work smoothly on all mobile phones and tablets?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gray-400 transition-transform"></i>
+          </button>
+          <div class="hidden px-6 pb-6 pt-1 text-sm text-gray-600 dark:text-gray-300 border-t border-gray-100 dark:border-gray-800">
+            Absolutely. Over 70% of web traffic today is mobile. Every website we build is rigorously tested on iOS, Android, tablets, and desktop screens for flawless responsiveness.
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard overflow-hidden">
+          <button type="button" data-faq-button aria-expanded="false" class="w-full px-6 py-5 flex items-center justify-between text-left font-semibold text-gray-900 dark:text-white">
+            <span>Do you help with domain name registration and hosting setup?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gray-400 transition-transform"></i>
+          </button>
+          <div class="hidden px-6 pb-6 pt-1 text-sm text-gray-600 dark:text-gray-300 border-t border-gray-100 dark:border-gray-800">
+            Yes! We handle domain DNS configuration, high-speed cloud hosting setup, SSL security certificates, and business email routing.
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard overflow-hidden">
+          <button type="button" data-faq-button aria-expanded="false" class="w-full px-6 py-5 flex items-center justify-between text-left font-semibold text-gray-900 dark:text-white">
+            <span>Can I update the text, images, or products later on my own?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gray-400 transition-transform"></i>
+          </button>
+          <div class="hidden px-6 pb-6 pt-1 text-sm text-gray-600 dark:text-gray-300 border-t border-gray-100 dark:border-gray-800">
+            Yes. We build clean, modular websites and provide a straightforward walkthrough so you can easily update text, change prices, or add photos anytime.
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-darkcard overflow-hidden">
+          <button type="button" data-faq-button aria-expanded="false" class="w-full px-6 py-5 flex items-center justify-between text-left font-semibold text-gray-900 dark:text-white">
+            <span>Are there any hidden monthly charges or locked contracts?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gray-400 transition-transform"></i>
+          </button>
+          <div class="hidden px-6 pb-6 pt-1 text-sm text-gray-600 dark:text-gray-300 border-t border-gray-100 dark:border-gray-800">
+            No. Our pricing is 100% upfront and transparent with no hidden platform lock-in fees. You fully own your website, code, and content.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Banner -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl bg-blue-600 text-white p-8 sm:p-14 text-center space-y-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold">Ready to build your website?</h2>
+        <p class="text-blue-100 max-w-xl mx-auto text-sm sm:text-base">
+          Contact Mayank Singh for a free quote tailored to your business goals.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 pt-2">
+          <a href="contact.html" class="px-6 py-3.5 rounded-xl font-semibold text-blue-600 bg-white hover:bg-gray-100 transition-colors shadow-xs">
+            Contact Us
+          </a>
+          <a href="https://wa.me/917827853747?text=Hi%20IAB%2C%20I%27d%20like%20to%20know%20more%20about%20your%20website%20services." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-white bg-[#25D366] hover:bg-[#20ba59] transition-colors shadow-xs">
+            <i data-lucide="message-square" class="w-4 h-4"></i>
+            <span>Chat on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-darkbg py-12 text-sm text-gray-600 dark:text-gray-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="space-y-3">
+        <div class="flex items-baseline">
+          <span class="text-xl font-black text-gray-900 dark:text-white font-heading">IAB</span>
+          <span class="w-2 h-2 ml-0.5 rounded-full bg-blue-600 inline-block"></span>
+        </div>
+        <p class="text-xs">Websites built for every business.</p>
+        <div class="text-xs font-semibold text-gray-900 dark:text-white">Mayank Singh, Founder</div>
+      </div>
+      <div>
+        <h4 class="font-semibold text-gray-900 dark:text-white mb-3 text-xs uppercase tracking-wider">Quick Links</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+          <li><a href="services.html" class="hover:text-blue-600">Services</a></li>
+          <li><a href="portfolio.html" class="hover:text-blue-600">Portfolio</a></li>
+          <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-gray-900 dark:text-white mb-3 text-xs uppercase tracking-wider">Services</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="services.html#business-websites" class="hover:text-blue-600">Business Websites</a></li>
+          <li><a href="services.html#ecommerce-stores" class="hover:text-blue-600">E-commerce Stores</a></li>
+          <li><a href="services.html#landing-pages" class="hover:text-blue-600">Landing Pages</a></li>
+          <li><a href="services.html#seo-and-maintenance" class="hover:text-blue-600">SEO &amp; Maintenance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-gray-900 dark:text-white mb-3 text-xs uppercase tracking-wider">Contact</h4>
+        <div class="space-y-2 text-xs">
+          <p><a href="tel:+917827853747" class="hover:text-blue-600 font-semibold text-gray-900 dark:text-white">+91 78278 53747</a></p>
+          <p><a href="mailto:mayank2345124@gmail.com" class="hover:text-blue-600">mayank2345124@gmail.com</a></p>
+          <p>Delhi, India</p>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 pt-6 border-t border-gray-200 dark:border-gray-800 text-xs text-center text-gray-400">
+      &copy; 2026 IAB. All rights reserved. Founded by Mayank Singh.
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <a href="https://wa.me/917827853747?text=Hi%20IAB%2C%20I%27d%20like%20to%20know%20more%20about%20your%20website%20services." target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" class="flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-xl hover:bg-[#20ba59] transition-all animate-whatsapp-pulse">
+      <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.711 1.456h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.411z"/></svg>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

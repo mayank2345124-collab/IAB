@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-page: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --bg-alt: #F5F6F8;
+    --text-primary: #111827;
+    --text-muted: #6B7280;
+    --border-color: #E5E7EB;
+    --accent: #2563EB;
+  }
+  .dark {
+    --bg-page: #0B0F19;
+    --bg-card: #111827;
+    --bg-alt: #161F30;
+    --text-primary: #F3F4F6;
+    --text-muted: #9CA3AF;
+    --border-color: #1F2937;
+    --accent: #3B82F6;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #111827;
+  transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease;
+}
+
+html.dark body {
+  background-color: #0B0F19;
+  color: #F3F4F6;
+}
+
+/* Explicit high-contrast text rules in dark mode to guarantee readability */
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: #F3F4F6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-jakarta), var(--font-inter), sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Subtle gentle animations */
+@keyframes subtle-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 14px 0 rgba(37, 211, 102, 0.35);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px 0 rgba(37, 211, 102, 0.55);
+  }
+}
+
+.animate-whatsapp-pulse {
+  animation: subtle-pulse 3s infinite ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
